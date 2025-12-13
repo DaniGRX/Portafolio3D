@@ -1,0 +1,269 @@
+<!DOCTYPE html>   <!-- Tipo de Documento html -->   <!-- -->
+<html lang="es">  <!-- Idioma Español -->
+<head> <!-- Aquí se colocarán todos los elementos que no queremos que se vean y que actuan en segundo plano -->
+    <meta charset="UTF-8"> <!-- Caracteres especiales para diferentes idiomas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Portfolio 3D</title> <!-- Nombre de la web en la barra de direcciones -->    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Esto es para que la página cargue estilos Bootstrap -->
+    <link rel="stylesheet" href="style.css">  <!-- Enlace a las librerias de estilos CSS --> <!-- Este que es el último es el que tiene prioridad. Prevalecerán los estilos CSS -->
+
+    
+
+</head> <!-- cierre del HEAD donde no se ven las cosas -->
+<body> <!-- Incio del Cuerpo de la Página Web -->
+
+    <!-- NAVBAR -->  <!-- La barra de navegación donde los enlaces llevan a cada sector. -->
+    <nav class="navbar"> <!-- Clase de inicio para crear un Nav Bar. Dependerá tambien de el tipo de estilo CSS  -->
+        <div class="logo">MiPortfolio 3D DCH</div> <!-- Cuerpo Divisorio donde se situa el logo de la web -->
+        <ul class="nav-links"> <!-- Linkeado a los diferentes apartados de la web -->
+            <li><a href="#modelado">Modelado</a></li> <!-- Lleva al primer Carrusel de imágenes seccion: Modelado haciendo uso de la etiqueta Listado/ a href -->
+            <li><a href="#hard-surface">Hard Surface</a></li> 
+           <!-- <li><a href="#retropologia">Retropología</a></li> -->
+            <li><a href="#texturizado">Texturizado</a></li>
+           <!-- <li><a href="#animacion">Animación</a></li> -->
+            <li><a href="#iluminacion">Iluminación</a></li>
+            <li><a href="#vfx">Destacado</a></li>
+            <li><a href="#contacto" class="btn-contacto">Contacto</a></li>
+
+
+        </ul> <!-- Etiqueta de Listado -->
+    </nav> <!-- Cierre del NavBar --> 
+
+    <!-- HERO -->  <!-- Se inicia el Hero --> 
+    <header class="hero"> 
+        <h1>DCH. Artista 3D – Portfolio</h1>
+        <p>Modelado • Texturizado • Animación • VFX</p>
+    
+           <!-- Panel desplegable -->
+        <div class="info-panel">
+            <p>Tras varios años pasando por diferentes escuelas de formación en el ámbito de la infografía y la creación de contenido 3D. DCH se presenta como artísta y modelador especializado en Environment Art, así como Character Artist. Destacando principalmente en estos dos sectores, tanto para la indostria del cine de animación como para el sector del Videojuego</p>
+        </div>
+    </header>
+
+ <section class="lightbox-section">
+    <h2>Proyectos Destacados</h2>
+
+    <div class="lightbox-carousel">
+        <div class="lightbox-item">
+            <img src="images/Calavera Front 2.png" alt="images/Calavera 3D">
+            <div class="lightbox-text">
+                <h3>Calavera Orgánica</h3>
+                <p>Estudio de anatomía y esculpido orgánico en alta resolución.</p>
+            </div>
+        </div>
+
+        <div class="lightbox-item">
+            <img src="images/Trap Trap Render Cycles.png" alt="Trap Render">
+            <div class="lightbox-text">
+                <h3>Entorno Stylized</h3>
+                <p>Proyecto de environment art con iluminación y render en Cycles.</p>
+            </div>
+        </div>
+
+        <div class="lightbox-item">
+            <img src="images/Bici Previo Textura 2.jpg" alt="Bicicleta">
+            <div class="lightbox-text">
+                <h3>Hard Surface</h3>
+                <p>Modelado y texturizado de props mecánicos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+    
+    <!-- SECCIÓN: MODELADO -->
+<section id="modelado" class="section-block">  <!-- Igual que el mismo patron de arriba pero con la sección de carrusel modelado -->
+    <h2>Modelado</h2>
+    <div class="carousel">
+        <div class="slides">
+            <img src="modelado/Martillo 1.png">
+            <img src="modelado/Frontal.png">
+            <img src="modelado/Retropo 36.png">
+            <img src="modelado/Trap Trap 2 Render.png">
+            <img src="modelado/frontal 1.png">
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN: HARD SURFACE -->   <!-- Igual que el mismo patron de arriba pero con la sección de carrusel HardSurface -->
+<section id="hard-surface" class="section-block">
+    <h2>Hard Surface</h2>
+    <div class="carousel">
+        <div class="slides">
+            <img src="hardsurface/Bici Previo Textura 2.jpg">  <!-- En este caso se extraerá la imagen de una carpeta donde se encuentren las imágenes llamada hardsurface -->
+            <img src="hardsurface/Render 1.jpg">
+            <img src="hardsurface/Render Ajedrez VRay.jpg">
+            <img src="hardsurface/Mis Cascos Render VRay 2.jpg">
+            <img src="hardsurface/12.jpg">
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN: RETROPOLOGÍA -->    <!-- Igual que el mismo patron de arriba pero con la sección de carrusel Retropología   ¡Se ha obiado ante la falta de material, no dispongo de imágenes propias hechas por mi!
+<section id="retropologia" class="section-block">
+    <h2>Retropología</h2>
+    <div class="carousel">
+        <div class="slides">
+            <img src="assets/retro1.jpg">
+            <img src="assets/retro2.jpg">
+            <img src="assets/retro3.jpg">
+            <img src="assets/hard3.jpg">
+        </div>
+    </div>
+</section> -->
+
+<!-- SECCIÓN: TEXTURIZADO -->    <!-- Igual que el mismo patron de arriba pero con la sección de carrusel Texturizado -->
+<section id="texturizado" class="section-block">
+    <h2>Texturizado</h2>
+    <div class="carousel">
+        <div class="slides">
+            <img src="texturizado/Boca Incendio.png">
+            <img src="texturizado/Oxido.png">
+            <img src="texturizado/Mueble.png">
+            <img src="texturizado/Ranita.png">
+            <img src="texturizado/0150.png">
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN: ANIMACIÓN -->    <!-- Igual que el mismo patron de arriba pero con la sección de carrusel Animación -->  <!-- Se ha obiado ante la falta de material, no dispongo de imágenes propias hechas por mi-->
+<!--<section id="animacion" class="section-block">
+    <h2>Animación</h2>
+    <div class="carousel">
+        <div class="slides">
+            <img src="assets/anim1.jpg">
+            <img src="assets/anim2.jpg">
+            <img src="assets/anim3.jpg">
+            <img src="assets/hard3.jpg">
+        </div>
+    </div>
+</section> -->
+
+<!-- SECCIÓN: ILUMINACIÓN -->    <!-- Igual que el mismo patron de arriba pero con la sección de carrusel Iluminación -->
+<section id="iluminacion" class="section-block">
+    <h2>Iluminación</h2>
+    <div class="carousel">
+        <div class="slides">
+            <img src="iluminación/Visión día 7.jpg">
+            <img src="iluminación/Scanline_nocturno.jpg">
+            <img src="iluminación/Plano callejón 2.png">
+            <img src="iluminación/bodegon final.jpg">
+            <img src="iluminación/render luz calida con volumetrica.jpg">
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN: PROYECTO DESTACADO (LIGHTBOX) -->
+<section id="vfx" class="section-block lightbox-section">
+    <h2>Proyecto Destacado</h2>
+
+    <div class="lightbox-carousel">
+        <div class="lightbox-item">
+            <img src="destacado/Render Final 1.jpg" alt="Proyecto 1">
+        </div>
+        <div class="lightbox-item">
+            <img src="destacado/Render final 3.jpg" alt="Proyecto 2">
+        </div>
+        <div class="lightbox-item">
+            <img src="destacado/Render final 5.jpg" alt="Proyecto 3">
+        </div>
+        <div class="lightbox-item">
+            <img src="destacado/Render Final 8.jpg" alt="Proyecto 4">
+        </div>
+        <div class="lightbox-item">
+            <img src="destacado/Render Final 7.jpg" alt="Proyecto 5">
+        </div>
+    </div>
+</section>
+
+<!-- LIGHTBOX FULLSCREEN -->
+<div id="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" alt="">
+</div>
+
+<!-- VISOR 3D -->
+<section id="modelo3d" class="section-block">
+
+    <h2>Demostración de Objeto 3D</h2>
+
+    <p class="contacto-descripcion">
+        Aquí se muestra un modelo 3D interactivo. Puedes rotarlo, hacer zoom y explorarlo libremente.
+    </p>
+
+    <!-- Model Viewer -->
+    <div class="container my-4">
+        <script type="module"
+            src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+        </script>
+
+        <model-viewer
+            src="baby_robot.glb"
+            alt="Modelo 3D interactivo"
+            camera-controls
+            auto-rotate
+            exposure="1"
+            shadow-intensity="1"
+            style="width:100%; height:450px; background:#222; border-radius:15px;">
+        </model-viewer>
+    </div>
+
+</section>
+
+
+<!-- JS de Bootstrap (bundle: incluye Popper) → al final del body -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+<!-- Tu JS opcional -->
+<script src="app.js"></script>  
+
+<!-- SECCIÓN: CONTACTO --> <!--Sección de Contacto para enlazar a un sistema que devuelva los mails-->
+<section id="contacto" class="contact-form">  <!-- apertura de etiqueta de sección Contacto -->
+    <h2>Contacto</h2>    <!-- Tipo de subtitulo h2 con su correpondiente formato CSS -->
+
+    <p class="contacto-descripcion">  <!-- Etiqueta de sección de párrafo -->
+        Si deseas ponerte en contacto para colaboraciones, encargos o consultas, completa el formulario o escríbeme directamente.
+    </p>   <!-- cierre de la etiqueta párrafo -->
+
+    <form action="https://formspree.io/f/xqagvwag" method="POST" class="contact-form"> <!-- Etiqueta de clase Contactar desde... Uso de formspree para envio a correo personal -->
+        <label hidden> for="email">  danigrxcurvapolar@gmail.com</label>
+        <input type="text" placeholder="Tu nombre" required>  <!-- Esta etiqueta requiere rellenar con un campo de texto y que obliga a introducir una nombre real o ficticio -->
+        <input type="email" placeholder="Tu correo" required>  <!-- Esta etiqueta requiere rellenar el campo con un mail para que llegue a otro correro un mail conlosdatosrellenos -->
+        <textarea placeholder="Escribe tu mensaje aquí..." required></textarea>  <!-- Etiqueta con campo de texto complementario pudiendo aumentarse gracias al CSS -->
+        <button type="submit">Enviar mensaje</button>  <!-- Etiqueta de botón de enviar con un estilo concreto marcado por el estilo CSS -->
+    </form>  <!-- Cierre de la etiqueta From -->
+</section>  <!-- Cierre de la sección form -->
+      
+    </section>
+   <!-- FOOTER -->   <!-- Nota aclaratoria: No he querido poner enlaces reales a las redes sociales, tan solo genéricos. -->
+<footer class="footer"> <!-- Inicia la etiqueta de clase footer -->
+    <p>2025 – Todos los derechos reservados. InfinitoUniverso@gmail.com Tlf de Contacto 000 00 00 00 </p> <!-- Sección de párrafo dentro del footer -->
+     
+    <!-- Sección de iconos de redes sociales --> <!-- Etiquetas a href con enlaces directos a las diferentes tipos de redes sociales -->
+    <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+</footer> <!-- Cierre del Footer -->
+
+<!-- Agregar el enlace a Font Awesome en el <head> -->
+<!-- Este enlace es necesario para mostrar los iconos correctamente --> <!-- Se requiere como campo obligatorio para mosotrar los iconos oficiales -->
+
+
+
+</body>   <!-- Cierre del Body -->
+
+</html> <!-- Cierre del Documento Doctype HTML -->

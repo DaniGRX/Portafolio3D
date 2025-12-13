@@ -1,0 +1,476 @@
+body {   /* Contiene la información del formato de margen en los laterales. Tipo de familia tipográfica, Fondo de color de la página */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #111;
+    color: #eee;
+}
+
+/* NAVBAR */  /* Formato y estilo del Nav Bar, Formato flexible para distintas resoluciones, alinear los bonotes al centro con un paading de 20 pixeles entre ellos verticalmente, usa un fondo con un color negro #000, sticky hace que se quede pegado arriba cuando se baja hacia a bajo en la página, Top lo posiciona en la parte superior de la página, z-Index, hace que siempre quede por encima de otros elementos. */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #000;
+    position: sticky;
+    top: 0; /* Establece que esté totalmente pegado a la parte de arriba sin margen alguno */
+    z-index: 10;
+}
+
+/* LOGO A LA IZQUIERDA */  /* En la sección de logo a la izquierda, da informaciópn de que será flexible para distintas resoluciones. El tamañano de la tipografía del texto Logo, el estilo boold de la tipografía Arial */
+.navbar .logo {
+    flex: 1;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* LINKS CENTRADOS */ /* Flex tipo 2 siendo el doble que el logo, los links se distribuyen con flexbox, Centra los elementos horizontalmente, gap es el espacio entre cada link, list style, quita puntos de las listas, no tendrá ni margen ni padding */
+.nav-links {
+    flex: 2;
+    display: flex;
+    justify-content: center; /* CENTRA LAS SECCIONES */
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {   /* Quita cualquier decoración a la tipografía, establece el color eee, indica el tamñano de la tipografía y el peso en el navbar de los enlaces, trancisión suave  */
+    text-decoration: none;
+    color: #eee;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover { /* Hace que al pasar el ratón por encima de las letras cambien el color a azul */
+    color: #00adee;
+}
+
+
+/* HERO */ /* Comunmente conocido como portada, texto al centro, un padding con mucho espaciado, añade una imagen de fondo a esa sección */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+   /* background: url('assets/img1.jpg') center/cover;  /* HERO */
+}
+.hero h1 {    /* peso de la tipografía en un estilo de párrafo h1, añade el tamñano de la botonería en la sección */
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+/* CAROUSEL */ /* Establece las reglas que se han de cumplir en el carrusel. Con el espaciado y la alineación del texto */
+.carousel-section {
+    padding: 60px;
+    text-align: center;
+}
+
+.carousel { /* Ancho, ocultación del carrusel en sus márgenes, hace que las imágenes no sobresalgan del carrusel al margen de su tamaño, suaviza la esquina del carrusel */
+    width: 0%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.slides {    /* Establece todas las imágenes en una fila, el ancho del contenedor de las imágenes dentro de la página, el tiempo de animación durante el desplazamineto */
+    display: flex;
+    width: 300%;
+    animation: slide 12s infinite;
+}
+
+.slides img {  /* establece el ancho de la imágenes dentro del carrusel */
+    width: 100%;
+}
+
+@keyframes slide {    /* cómo ha de ir desplazando las imágenes entre ellas y la vuelta al inicio para nuevamente emprezar el ciclo de visualización */
+    0% {transform: translateX(0);}
+    33% {transform: translateX(-100%);}
+    66% {transform: translateX(-200%);}
+    100% {transform: translateX(0);}
+}
+
+/* VISOR 3D */
+#viewer {
+    width: 100%;
+    height: 500px;
+    background: #222;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #ccc;
+    margin-top: 60px;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    border-top: 1px solid #222;
+}
+/* BLOQUES DE SECCIÓN */
+.section-block {
+    padding: 80px 60px;
+    border-bottom: 1px solid #222;
+    text-align: center;
+}
+
+.section-block h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: #00adee;
+}
+
+/* CAROUSEL UNIVERSAL */        /* AQUÍ MODIFICAREMOS EL ANCHO Y LARGO DE LOS CARRUSELES ORIGINALES*/ 
+.carousel {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 1px solid #333;
+}
+
+.slides {
+    display: flex;
+    width: 40%;
+    animation: slide 20s infinite;
+}
+
+.slides img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* SECCIÓN DE CONTACTO */   /* En la seeción de contacto estableceremos el estilo visual y las diferentes secciones */
+.section-contacto {
+    padding: 80px 60px;
+    text-align: center;
+    /*background: #111;*/
+    border-top: 1px solid #222;
+}
+
+.section-contacto h2 {
+    font-size: 2.4em; /* Tamaño de la tipografía con la que se va a rellenar el campo */
+    color: #00adee;  /* El color de rellenado en el formulario */
+    margin-bottom: 20px;
+}
+
+.contacto-descripcion {
+    font-size: 1.1em;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+/* FORMULARIO */
+.contact-form {
+    width: 80%;               /* Ampliado para permitir objetos más largos */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;   
+    gap: 20px;
+}
+
+/* 🔹 CONTENEDOR HORIZONTAL PARA LOS CAMPOS */
+.contact-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Cada campo dentro de la fila */
+.contact-row .form-group {
+    flex: 1;                    /* Se estiran para ocupar el espacio disponible */
+}
+
+/* 🔹 Estilo de los inputs y textarea */
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #222;
+    color: #eee;
+    font-size: 1em;
+    width: 100%;                /* OBLIGATORIO para que se estiren */
+}
+
+/* Textarea */
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* 🔹 Botón */
+.contact-form button {
+    padding: 15px;
+    border: none;
+    background: #00adee;
+    color: #111;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;                /* Se estira también */
+}
+
+.contact-form button:hover {
+    background: #0089bb;
+}
+
+ ESPACIADO ENTRE CAMPOS DEL FORMULARIO   /* Esto se ha puesto para dar espaciado entre los campos */
+ 
+.contact-form input,
+.contact-form textarea{
+    margin-bottom: 25px;
+}
+
+
+
+
+/* BOTÓN CONTACTO EN NAVBAR */              /* Establece el tamano, forma y color que tendrá el boton enviar, con un tipografía con un peso concreto */
+.btn-contacto {
+    background: #00adee;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: #111 !important;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-contacto:hover {
+    background: #0089bb;
+    color: #fff !important;
+}
+
+
+.social-icons a {                               /* Estilos CSS para los botones de las redes sociales */
+    margin: 0 10px;
+    font-size: 24px; /* Tamaño del icono  dentro del Footer */
+    color: #333; /* Color predeterminado de la botonería */  /*  */
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #0077b5; /*  El icono cambia de color al pasar por encima el ratón a azul */
+}
+
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('assets/img1.jpg') center/cover;
+    position: relative; /* Necesario para el posicionamiento absoluto del panel */
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+/* Panel desplegable */
+.info-panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #eee;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.hero:hover .info-panel {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* LIGHTBOX CAROUSEL */
+.lightbox-section {
+    padding: 80px 60px;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+.lightbox-section h2 {
+    color: #00adee;
+    font-size: 2.2em;
+    margin-bottom: 40px;
+}
+
+.lightbox-carousel {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lightbox-item {
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.lightbox-item:hover {
+    transform: scale(1.05);
+}
+
+.lightbox-item img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.lightbox-text {
+    margin-top: 15px;
+}
+
+.lightbox-text h3 {
+    color: #00adee;
+    margin-bottom: 5px;
+}
+
+/* LIGHTBOX FULLSCREEN */
+#lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+#lightbox img {
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 12px;
+    animation: zoomIn 0.35s ease;
+}
+
+/* Animación */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+}
+
+#lightbox .close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Zoom al hacer click */
+.lightbox-item img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lightbox-item img:active {
+    transform: scale(3.12);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* LIGHTBOX SECTION */
+.lightbox-section {
+    padding: 80px 60px;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+.lightbox-section h2 {
+    color: #00adee;
+    font-size: 2.2em;
+    margin-bottom: 40px;
+}
+
+/* GRID DE MINIATURAS */
+.lightbox-carousel {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lightbox-item {
+    width: 300px;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.lightbox-item:hover {
+    transform: scale(1.05);
+}
+
+.lightbox-item img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* LIGHTBOX FULLSCREEN */
+#lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    z-index: 999;
+    cursor: zoom-out;
+}
+
+/* IMAGEN AMPLIADA x3.12 */
+#lightbox img {
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    transform: scale(3.12);
+    transform-origin: center;
+    margin: 120px;
+    border-radius: 12px;
+    animation: zoomIn 0.4s ease;
+}
+
+/* BOTÓN CERRAR */
+#lightbox .close {
+    position: fixed;
+    top: 25px;
+    right: 40px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* ANIMACIÓN */
+@keyframes zoomIn {
+    from {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(3.12);
+        opacity: 1;
+    }
+}
