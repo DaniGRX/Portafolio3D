@@ -200,18 +200,18 @@
     <!-- Model Viewer -->
     <div class="container my-4">
         <script type="module"
-            src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"">
-        </script>
+  src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
 
-        <model-viewer
-            src="baby_robot.glb"
-            alt="Modelo 3D interactivo"
-            camera-controls
-            auto-rotate
-            exposure="1"
-            shadow-intensity="1"
-            style="width:100%; height:450px; background:#222; border-radius:15px;">
-        </model-viewer>
+  <model-viewer
+  src="models/baby_robot.glb"
+  alt="Modelo 3D interactivo"
+  camera-controls
+  auto-rotate
+  shadow-intensity="1"
+  exposure="1"
+  style="width:100%; height:450px; background:#222; border-radius:15px;">
+</model-viewer>
     </div>
 
 </section>
@@ -231,13 +231,17 @@
         Si deseas ponerte en contacto para colaboraciones, encargos o consultas, completa el formulario o escríbeme directamente.
     </p>   <!-- cierre de la etiqueta párrafo -->
 
-    <form action="https://formspree.io/f/xqagvwag" method="POST" class="contact-form"> <!-- Etiqueta de clase Contactar desde... Uso de formspree para envio a correo personal -->
-        <label hidden> for="email">  danigrxcurvapolar@gmail.com</label>
-        <input type="text" placeholder="Tu nombre" required>  <!-- Esta etiqueta requiere rellenar con un campo de texto y que obliga a introducir una nombre real o ficticio -->
-        <input type="email" placeholder="Tu correo" required>  <!-- Esta etiqueta requiere rellenar el campo con un mail para que llegue a otro correro un mail conlosdatosrellenos -->
-        <textarea placeholder="Escribe tu mensaje aquí..." required></textarea>  <!-- Etiqueta con campo de texto complementario pudiendo aumentarse gracias al CSS -->
-        <button type="submit">Enviar mensaje</button>  <!-- Etiqueta de botón de enviar con un estilo concreto marcado por el estilo CSS -->
-    </form>  <!-- Cierre de la etiqueta From -->
+   <form action="https://formspree.io/f/xqagvwag" method="POST" class="contact-form">
+
+  <input type="text" name="name" placeholder="Tu nombre" required>
+
+  <input type="email" name="email" placeholder="Tu correo" required>
+
+  <textarea name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+  <button type="submit">Enviar mensaje</button>
+</form>
+
 </section>  <!-- Cierre de la sección form -->
       
     </section>
@@ -267,4 +271,3 @@
 </body>   <!-- Cierre del Body -->
 
 </html> <!-- Cierre del Documento Doctype HTML -->
-
